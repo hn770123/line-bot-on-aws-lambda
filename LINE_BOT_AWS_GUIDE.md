@@ -96,31 +96,8 @@ API Gateway の代わりに Function URL を使用して、LINE プラットフ�
 
 ## 5. デプロイ手順
 
-ローカルで開発したコードを Lambda にデプロイします。
-
-### 5.1 コードの準備
-必要なライブラリ (LINE Messaging API SDK など) をインストールし、コードと一緒に zip 化します。
-
-**例 (Python の場合):**
-```bash
-# プロジェクトディレクトリを作成
-mkdir line-bot
-cd line-bot
-
-# ライブラリを現在のディレクトリにインストール
-pip install line-bot-sdk -t .
-
-# lambda_function.py を作成して、Bot のロジックを記述します
-touch lambda_function.py
-
-# zip ファイルを作成
-zip -r function.zip .
-```
-
-### 5.2 アップロード
-1. Lambda コンソールの「コード」タブを開きます。
-2. 「アップロード元」ボタン → 「.zip ファイル」を選択します。
-3. 作成した `function.zip` をアップロードし、「保存」をクリックします。
+デプロイは GitHub Actions を使用して行います。
+詳細な手順については [deploy.md](./deploy.md) を参照してください。
 
 ---
 
