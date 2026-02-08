@@ -110,8 +110,8 @@ cd line-bot
 # ライブラリを現在のディレクトリにインストール
 pip install line-bot-sdk -t .
 
-# 用意した lambda_function.py をこのディレクトリにコピー (または新規作成して編集)
-cp ../lambda_function.py .
+# lambda_function.py を作成して、Bot のロジックを記述します
+touch lambda_function.py
 
 # zip ファイルを作成
 zip -r function.zip .
